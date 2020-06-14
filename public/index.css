@@ -1,0 +1,38 @@
+.field{
+	margin: 10px;
+}
+.input{
+	width: 300px;
+}
+.id > div {
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+.options{
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+}
+
+.control{
+	font-size: 1.1rem;
+}
+
+.outer-buttons-section{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.inner-buttons-section{
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.hero{
+	text-align: center;
+	border-radius: 6px;
+}

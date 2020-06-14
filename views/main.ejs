@@ -1,0 +1,58 @@
+<%- include("partials/header") %>
+<main class='section'>
+	<section class='box'>
+		<div class='hero is-primary is-bold'>
+			<div class='hero-body'>
+				<p class='title'>Witamy w formularzu glosowania</p>
+				<p class='subtitle'>Oddaj głos</p>
+			</div>
+		</div>
+		<form action='/addRecord' method='POST' class='field'>
+			<div class='field'>
+				<div class='control id'>
+					<div>
+						<label class='label' for='id'>Identyfikator</label>
+					</div>
+					<div>
+						<input type='number' placeholder="Wpisz swój identyfikator" class='input' name='id' />
+					</div>
+				</div>
+			</div>
+			<div class='field'>
+				<div class='options'>
+					<div class="control">
+					  <label class="radio">
+					    <input type="radio" name="option">
+					    Adam
+					  </label>
+					  <label class="radio">
+					    <input type="radio" name="option">
+					    Artur
+					  </label>
+  					  <label class="radio">
+					    <input type="radio" name="option">
+					    Arek
+					  </label>
+  					  <label class="radio">
+					    <input type="radio" name="option">
+					    Mateusz
+					  </label>
+					</div>
+				</div>
+			</div>
+			<div class="field is-grouped">
+				<div class='outer-buttons-section'>
+					<div class='inner-buttons-section'>
+					  	<div class="control">
+				    		<button class="button is-success" disabled>Submit</button>
+					  	</div>
+					  	<div class='control'>
+					  		<button class='button is-link'>Zobacz wyniki</button>
+					  	</div>
+					</div>
+				</div>
+			</div>
+		</form> 
+	</section>
+</main>
+<%- include("partials/footer") %>
