@@ -3,7 +3,7 @@
 	<section class='box'>
 		<div class='hero is-primary is-bold'>
 			<div class='hero-body'>
-				<p class='title'>Witamy w formularzu glosowania</p>
+				<p class='title'>Witamy w formularzu głosowania</p>
 				<p class='subtitle'>Oddaj głos</p>
 			</div>
 		</div>
@@ -21,22 +21,12 @@
 			<div class='field'>
 				<div class='options'>
 					<div class="control">
-					  <label class="radio">
-					    <input type="radio" name="option">
-					    Adam
-					  </label>
-					  <label class="radio">
-					    <input type="radio" name="option">
-					    Artur
-					  </label>
-  					  <label class="radio">
-					    <input type="radio" name="option">
-					    Arek
-					  </label>
-  					  <label class="radio">
-					    <input type="radio" name="option">
-					    Mateusz
-					  </label>
+						<% dane.map( ( { name } ) => { %>
+							<label class="radio">
+								<input type="radio" name="option">
+								<%= name %>
+							  </label>
+						<% }) %>
 					</div>
 				</div>
 			</div>
@@ -44,7 +34,7 @@
 				<div class='outer-buttons-section'>
 					<div class='inner-buttons-section'>
 					  	<div class="control">
-				    		<button class="button is-success" disabled>Submit</button>
+				    		<button class="button is-success" disabled>Zagłosuj</button>
 					  	</div>
 					  	<div class='control'>
 					  		<button class='button is-link'>Zobacz wyniki</button>

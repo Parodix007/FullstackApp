@@ -1,3 +1,9 @@
-  <script src='/scripts/index.js' ></script>
+  <script>
+    document.querySelector('form').reset()
+
+    document.querySelector('.input').addEventListener('blur', e => {
+      e.target.value === true ? alert(e.target.value) : alert("Wpisz cos")
+    })
+  </script>
   </body>
 </html>
