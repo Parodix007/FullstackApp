@@ -1,3 +1,5 @@
+//Wlidacja wpisywanego ID, json z uprawnionymi, opcja dodawania glosu
+
 const express = require('express')
 const app = express()
 const body = require('body-parser')
