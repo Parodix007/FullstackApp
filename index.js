@@ -1,20 +1,33 @@
-//Wlidacja wpisywanego ID, json z uprawnionymi, opcja dodawania glosu
+'use strict'
 
+// Potrzebne narzedzia do serwera
 const express = require('express')
 const app = express()
-const body = require('body-parser')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+
+
+// Widoki
 const { Startujacy } = require('./Functions/displayOptions')
+const { checkID } = require('./Functions/voute')
+const { makeVoute } = require('./Functions/makeVoute')
 
+
+
+// Włączenie narzedzi do serwera
 app.set('view engine', 'ejs')
-app.use(body.urlencoded({extended: true}))
-app.use(express.static('public'))
+app.use(bodyParser.urlencoded({extended: true}))
+app.use('/public', express.static(__dirname + '/public'))
+app.use(cors())
 
+
+// Ustawienie routingu
 app.get('/', Startujacy)
+app.post('/validateID?:userID', checkID)
+app.post('/makeVoute', makeVoute)
+//app.get('/wyniki', Wyniki)
+app.get('*', (req, res) => res.send('Zle trafiles') )
 
-app.get('/checkId', (req, res) => {
-	res.redirect('/')
-	return checkId(req.body.id)
-})
-
+//Wlaczenie serwera
 app.listen(2000, () => console.log("Server is running!"))
 

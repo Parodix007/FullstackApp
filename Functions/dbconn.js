@@ -3,5 +3,5 @@ module.exports = mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'',
-    database: 'FullstackApp'
+    database: 'fullstackapp'
 })
