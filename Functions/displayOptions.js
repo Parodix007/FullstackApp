@@ -3,7 +3,7 @@ module.exports = {
         const conn = require('./dbconn')
         const query = "SELECT * FROM startujacy"
         conn.query(query, (err, row) => {
-            err ? new Error(err) : false
+            err ? res.send(err) : false
     
             res.render('main', {
                 dane: [...row],
